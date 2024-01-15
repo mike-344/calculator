@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    height: 600px;
+    width: 450px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.display{
+    text-align: right;
+    font-size: 45px;
+    background-color: lightblue;
+    padding: 45px 6px;
+    
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.btn{
+    width: calc(100% / 4);
+    font-size: 30px;
+    
+    
+}
+
