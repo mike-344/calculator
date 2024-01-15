@@ -26,3 +26,13 @@ function operate(oper, num1, num2){
        return divide(num1, num2)
     }
 }
+
+
+const display = document.querySelector(".display")
+const numButtons = document.querySelectorAll(".btn.num")
+numButtons.forEach((button)=> {
+    button.addEventListener("click", (e) => {
+        display.textContent += e.target.textContent
+        first = +display.textContent
+    })
+})
