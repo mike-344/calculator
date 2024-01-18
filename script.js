@@ -52,7 +52,9 @@ numButtons.forEach((button)=> {
 
 
         if ((first !==  "" && operator !== "")){
+            if (second === ""){
             display.textContent = ""
+            }
         }
 
          if (first !== "" && operator !== ""){
