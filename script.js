@@ -11,9 +11,8 @@ function multiply(a, b){
     return a * b;
 }
 
-let first;
-let second;
-let operator;
+
+
 
 function operate(oper, num1, num2){
     if (oper === "+"){
@@ -27,12 +26,60 @@ function operate(oper, num1, num2){
     }
 }
 
+let first = "";
+let second = "";
+let operator = "";
+
+
 
 const display = document.querySelector(".display")
 const numButtons = document.querySelectorAll(".btn.num")
+const operButtons = document.querySelectorAll(".btn.oper")
+const equals = document.querySelector(".equals")
+
+
+display.textContent = "0"
+
+
 numButtons.forEach((button)=> {
     button.addEventListener("click", (e) => {
+
+        
+        if (first === "" && second === "" & operator === ""){
+            display.textContent = ""
+        }
+
+
+        if (first !==  "" && operator !== ""){
+            display.textContent = ""
+        }
+
+         if (first !== "" && operator !== ""){
+            display.textContent += e.target.textContent
+             second = +display.textContent
+        } else {
+
         display.textContent += e.target.textContent
         first = +display.textContent
+        }
+       
     })
 })
+
+
+operButtons.forEach((button) =>   {
+    button.addEventListener("click" , (e) => {
+       operator = e.target.textContent;
+       
+    
+
+    })
+})
+
+
+equals.addEventListener("click", () =>{
+    display.textContent=operate(operator, first, second)
+
+})
+
+
