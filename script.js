@@ -69,8 +69,14 @@ numButtons.forEach((button)=> {
 
 operButtons.forEach((button) =>   {
     button.addEventListener("click" , (e) => {
+        if (first !== "" && second !== ""){
+            display.textContent=operate(operator, first, second)
+            first = +display.textContent
+            second = ""
+            operator = e.target.textContent
+        } else{
        operator = e.target.textContent;
-       
+        }
     
 
     })
