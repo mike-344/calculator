@@ -36,6 +36,7 @@ const display = document.querySelector(".display")
 const numButtons = document.querySelectorAll(".btn.num")
 const operButtons = document.querySelectorAll(".btn.oper")
 const equals = document.querySelector(".equals")
+const clear = document.querySelector(".clear")
 
 
 display.textContent = "0"
@@ -87,6 +88,15 @@ equals.addEventListener("click", () =>{
     display.textContent=operate(operator, first, second)
     first = +display.textContent
     second = ""
+
+})
+
+clear.addEventListener("click", () => {
+    display.textContent = "0"
+    first = "";
+    second = "";
+    operator = "";
+
 
 })
 
