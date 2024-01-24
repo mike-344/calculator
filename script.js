@@ -87,9 +87,11 @@ operButtons.forEach((button) =>   {
 
 
 equals.addEventListener("click", () =>{
+    if (first !== "" && second !== "" && operator !== ""){
     display.textContent=operate(operator, first, second)
     first = +display.textContent
     second = ""
+    }
 
 })
 
