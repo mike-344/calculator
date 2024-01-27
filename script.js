@@ -77,9 +77,9 @@ operButtons.forEach((button) =>   {
             first = +display.textContent
             second = ""
             operator = e.target.textContent
-        } else{
-       operator = e.target.textContent;
-        }
+        } else if (!(first === "" && second === "")){
+            operator = e.target.textContent;
+        } 
     
 
     })
